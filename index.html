@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Website</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="hello">
+        <h2>Угадай моё число</h2>
+    </div>
+    <div id="step1" class="card step1">
+        <h1>Привет!</h1>
+        <p>Правила игры очень просты! Я загадаю число от 1 до 100, а ты попробуй его отгадать!</p>
+        <p>Если готов введи своё имя:</p>
+        <div class="input-container ic1">
+            <input id="firstname" class="input" type="text" placeholder=" " autocomplete="off" />
+            <div class="cut"></div>
+            <label for="firstname" class="placeholder">Введи своё имя:</label>
+        </div>
+        <button id="startBtn" class="btn hologram">
+            <span data-text="Начнем">Начнем</span>
+            <div class="scan-line"></div>
+        </button>
+        <p id="message" style="color: red; margin-top: 10px;"></p>
+    </div>
+
+    <div id="step2" class="card step2" style="display:none;">
+        <h3><span id="greeting"></span>, Угадай число от 1 до 100:</h3>
+        <input type="number" class="inputNumber" id="userNumber" min="1" max="100" />
+        <button id="guessBtn" class="btn hologram">
+            <span data-text="Проверить">Проверить</span>
+            <div class="scan-line"></div>
+        </button>
+        <h4 class="result" id="result" style="color: rgb(224, 28, 192);"></h4>
+    </div>
+
+    <div id="step3" class="card step3" style="display:none;">
+        <h3>Невероятно!<!-- <span id="greetingGrate"></span>  -->Ты угадал моё число!</h3>
+        <div id="cink" class="contanierBtn" style="display: none;">
+            <p>Прийдется постараться</p>
+        </div>
+        <button id="surprisBtn" class="btn hologram">
+            <span data-text="Забрать приз">Забрать приз</span>
+            <div class="scan-line"></div>
+        </button>
+    </div>
+
+    <div id="captchaInClass" class="captcha" style="display: none;">
+        <div class="captcha-container">
+            <h3>Пожалуйста, введите символы с картинки: <span id="captchaText"></span></h3>
+            <div id="captchaSVG"></div>
+            <input id="captchaInput" class="input" type="text" placeholder="Введите символы сюда" />
+            <button id="captchaCheckBtn" class="btn hologram">
+                <span data-text="Проверить">Проверить</span>
+                <div class="scan-line"></div>
+            </button>
+        </div>
+    </div>
+
+    <div id="step4" class="card step4" style="display:none;">
+        <div class="leaderboardContainer" style="margin-top: 20px;">
+            <h3>Таблица найденых ботов</h3>
+            <h4>Поздравляю! ТЫ - БОТ!</h4>
+            <table id="leaderboardTable" cellpadding="5" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Место</th>
+                        <th>Имя</th>
+                        <th>Время (сек)</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="image">
+        <img src="img/img_main.svg" alt="">
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__contacts">
+                <a class="footer__link-mail" href="mailto:t.finenko@bk.ru">t.finenko@bk.ru</a>
+            </div>
+            <nav class="footer__nav">
+                <h1>FinZaGames</h1>
+                <p>2k25</p>
+            </nav>
+            <div class="footer__socials">
+                <a class="footer__icons-tg" href="https://t.me/TatianaIT"><img src="img/Telegram.svg"
+                        alt="Telegram"></a>
+                <a class="footer__icons-git" href="https://github.com/FinZag"><img src="img/Github.svg"
+                        alt="Github"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Game.js">
+    </script>
+</body>
+
+</html>
